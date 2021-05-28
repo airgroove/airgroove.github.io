@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "YXAD9RM6J3.com.ricoh.jp.mobilesuite.iOS",
+                "paths": [
+                    "/v1/multi-factor-auth" 
+                ]
+            }
+        ]
+    }
+}
