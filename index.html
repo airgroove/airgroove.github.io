@@ -5,32 +5,48 @@
     <title>RICOH ProductiveSuiteのインストール</title>
  
     <script type="text/javascript">
-    var userAgent = navigator.userAgent.toLowerCase();
     const googlePlayLink = "https://play.google.com/store/apps/details?id=com.ricoh.jp.mobilesuite";
     const appStoreLink = "https://apps.apple.com/jp/app/ricoh-productivesuite/id1554028054?itsct=apps_box_link&itscg=30200";
  
-    window.onload = function(){
- 
-      if (userAgent.indexOf("android") > -1) {
-          // Open App DL page in Google Play
-          location.href= googlePlayLink;
-      } else if (userAgent.search(/iphone|ipad|ipod/) > -1) {
-          // Open App DL page in App Store
-          location.href= appStoreLink;
-      }else{
-        <p>ProductiveSuiteはPCに対応していません。iOS/Android端末で本リンクにアクセスしてください。</p>
+    function onLoad(){
+      if (navigator.userAgent.match(/Android/)) {
+        if (navigator.userAgent.match(/Chrome/)) {
+          setTimeout(function () {
+            // ブラウザがバックグランドではない
+            if (!document.webkitHidden)
+            window.location.href = googlePlayLink;
+          }, 1000);
+          // window.location.href = URL;
+        }
+        // } else {
+        //   var iframe = document.createElement("iframe");
+        //   iframe.style.border = "none";
+        //   iframe.style.width = "1px";
+        //   iframe.style.height = "1px";
+        //   var t = setTimeout(function () {
+        //     window.location = MARKET;
+        //   }, 1000);
+        //   iframe.onload = function () {
+        //     clearTimeout(t)
+        //   };
+        //   iframe.src = URL;
+        //   document.body.appendChild(iframe);
+        // }
+      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
+        setTimeout(function () {
+          if (!document.webkitHidden) {
+            window.location = appStoreLink;
+          }
+        }, 25);
+          // window.location = UniversalLink;
+      } else {
+        <p>ProductiSuiteはPCに対応していません。iOS/Android端末で本リンクにアクセスしてください。 </p>
       }
- 
     }
     </script>
- 
   </head>
- 
-<body>
-  <div style="width:0; height:0; overflow:hidden;">
-  <iframe id="launch_frame" name="launch_frame">
-  </iframe>
-  </div>
-</body>
- 
+  
+  <body onload="onLoad()">
+  </body>
+
 </html>
