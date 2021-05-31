@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>URL scheme / Redirect Test</title>
+ 
+    <script type="text/javascript">
+    var userAgent = navigator.userAgent.toLowerCase();
+    const googlePlayLink = "https://play.google.com/store/apps/details?id=com.ricoh.jp.mobilesuite";
+    const AppStoreLink = "https://apps.apple.com/jp/app/ricoh-productivesuite/id1554028054?itsct=apps_box_link&itscg=30200";
+ 
+    window.onload = function(){
+ 
+      if (userAgent.indexOf("android") > -1) {
+          // Open App DL page in Google Play
+          location.href= googlePlayLink;
+      } else if (userAgent.search(/iphone|ipad|ipod/) > -1) {
+        setTimeout(function(){
+          // Open App DL page in App Store
+          location.href= AppStoreLink;
+        } , 500);
+      }
+ 
+    }
+    </script>
+ 
+  </head>
+ 
+<body>
+  <div style="width:0; height:0; overflow:hidden;">
+  <iframe id="launch_frame" name="launch_frame">
+  </iframe>
+  </div>
+</body>
+ 
+</html>
