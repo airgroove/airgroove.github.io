@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <!-- <title>URL scheme / Redirect Test</title> -->
+    <title>RICOH ProductiveSuiteのインストール</title>
  
     <script type="text/javascript">
     var userAgent = navigator.userAgent.toLowerCase();
@@ -17,7 +17,7 @@
       } else if (userAgent.search(/iphone|ipad|ipod/) > -1) {
           // Open App DL page in App Store
           location.href= appStoreLink;
-          window.close();
+          self.closed();
       }else{
         <p>ProductiveSuiteはPCに対応していません。iOS/Android端末で本リンクにアクセスしてください。</p>
       }
@@ -28,10 +28,10 @@
   </head>
  
 <body>
-  <div style="width:0; height:0; overflow:hidden;">
+  <!-- <div style="width:0; height:0; overflow:hidden;">
   <iframe id="launch_frame" name="launch_frame">
   </iframe>
-  </div>
+  </div> -->
 </body>
  
 </html>
