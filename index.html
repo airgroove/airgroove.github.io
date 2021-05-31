@@ -2,12 +2,12 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>URL scheme / Redirect Test</title>
+    <!-- <title>URL scheme / Redirect Test</title> -->
  
     <script type="text/javascript">
     var userAgent = navigator.userAgent.toLowerCase();
     const googlePlayLink = "https://play.google.com/store/apps/details?id=com.ricoh.jp.mobilesuite";
-    const AppStoreLink = "https://apps.apple.com/jp/app/ricoh-productivesuite/id1554028054?itsct=apps_box_link&itscg=30200";
+    const appStoreLink = "https://apps.apple.com/jp/app/ricoh-productivesuite/id1554028054?itsct=apps_box_link&itscg=30200";
  
     window.onload = function(){
  
@@ -15,10 +15,11 @@
           // Open App DL page in Google Play
           location.href= googlePlayLink;
       } else if (userAgent.search(/iphone|ipad|ipod/) > -1) {
-        setTimeout(function(){
           // Open App DL page in App Store
-          location.href= AppStoreLink;
-        } , 500);
+          location.href= appStoreLink;
+          window.close();
+      }else{
+        <p>ProductiveSuiteはPCに対応していません。iOS/Android端末で本リンクにアクセスしてください。</p>
       }
  
     }
