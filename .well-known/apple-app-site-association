@@ -7,6 +7,12 @@
                 "paths": [
                     "*" 
                 ]
+            },
+            {
+                "appID": "4MB2V7R44Y.com.ricoh.jp.MobileSuite.dev.iOS",
+                "paths": [
+                    "*" 
+                ]
             }
         ]
     }
