@@ -12,39 +12,9 @@
       const appStoreLink = "https://apps.apple.com/jp/app/ricoh-productivesuite/id1554028054?itsct=apps_box_link&itscg=30200";
       function onLoad(){
       if (userAgent.match(/Android/i)) {
-        if (userAgent.match(/Chrome/i)) {
-          // setTimeout(function () {
-            // ブラウザがバックグランドではない
-            // if (!document.webkitHidden)
-            console.log('Android Load Start');
-            window.location.href = googlePlayLink;
-            console.log('Android Load Finished');
-          // }, 1000);
-          // window.location.href = URL;
-        }
-        // } else {
-        //   var iframe = document.createElement("iframe");
-        //   iframe.style.border = "none";
-        //   iframe.style.width = "1px";
-        //   iframe.style.height = "1px";
-        //   var t = setTimeout(function () {
-        //     window.location = MARKET;
-        //   }, 1000);
-        //   iframe.onload = function () {
-        //     clearTimeout(t)
-        //   };
-        //   iframe.src = URL;
-        //   document.body.appendChild(iframe);
-        // }
+          window.location.href = googlePlayLink;
       } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
-        // setTimeout(function () {
-        //   if (!document.webkitHidden) {
-            console.log('iOS Load Start');
-            window.location.href = appStoreLink;
-            console.log('iOS Load Finished');
-        //   }
-        // }, 25);
-          // window.location = UniversalLink;
+          window.location.href = appStoreLink;
       } else {
         console.log('PC Load Start');
         document.write('<p>ProductiveSuiteはPCに対応していません。<br>iOS/Android端末で本リンクにアクセスしてください。</p>');
