@@ -1,0 +1,20 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.ricoh.jp.mobilesuite",
+            "sha256_cert_fingerprints":
+            ["A0:3F:67:8C:91:D1:59:F8:EE:31:77:19:30:50:92:A6:8C:59:E8:97:70:74:77:8B:A1:7C:E7:A3:EE:D9:87:5F"]
+        }
+    },
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.ricoh.jp.mobilesuite.debug",
+            "sha256_cert_fingerprints":
+            ["FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"]
+        }
+    }
+]
