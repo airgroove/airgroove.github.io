@@ -18,5 +18,15 @@
         "A0:3F:67:8C:91:D1:59:F8:EE:31:77:19:30:50:92:A6:8C:59:E8:97:70:74:77:8B:A1:7C:E7:A3:EE:D9:87:5F"
       ]
     }
-  }
+  },
+    {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ricoh.jp.mobilesuiteprint",
+      "sha256_cert_fingerprints": [
+        " A0:3F:67:8C:91:D1:59:F8:EE:31:77:19:30:50:92:A6:8C:59:E8:97:70:74:77:8B:A1:7C:E7:A3:EE:D9:87:5F"
+      ]
+    }
+  },
 ]
